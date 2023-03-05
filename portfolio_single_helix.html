@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Clean Template Responsive Retina Ready One Page, Multiple Pages Multipurpose Template by Benaissa Ghrib" />
+<meta name="keywords" content="HTML, CSS, JavaScript, creative, business, template, one page, Multi pages, retina ready, high resolution, coming soon,  responsive one page template, Multipurpose" />
+<meta name="author" content="Benaissa Ghrib" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Clean Template</title>
+
+<!--Stylesheet-->
+<link rel="stylesheet"  href="css/main.css" />
+<link rel="stylesheet"  href="css/responsive.css" />
+<link rel="stylesheet" href="css/fontello.css" />
+<link rel="stylesheet" href="css/font.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+
+
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic"/>
+
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!--[if lt IE 8]>
+<style>
+/* For IE < 8 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+</style>
+<![endif]-->
+
+
+
+<body>
+	
+
+<!--Wrapper-->
+<div id="wrapper" class="logo">
+	<!--Main header-->
+	<section id="header">
+		<div id="innerHeader">
+			
+			<!-- Holder 960-->
+			<div class="holder960">
+					
+		<!--Header-->
+		<header class="clearfix">
+				<!--Logo-->
+				<div id="logo">
+				<h1><a href="index.html">My <span>Portfolio</span></a></h1>
+				</div>
+
+			</header>
+			<!--End header-->
+			
+				</div>
+			<!--End holder 960-->
+			
+		</div>
+		<!--End inner header-->
+		
+		
+	</section>	
+	<!--End main header-->
+	
+
+	<!--Teaser-->
+	<section id="teaser">
+		<img src="images/sliderImages/innerPage.jpg" alt="" />
+	</section>
+	<!--End teaser-->
+	
+	
+		
+		
+		
+	
+		<!--Main content-->
+	<div id="mainContent" class="clearfix">
+		<div class="arrowMain"></div>
+		<!--Inner Content-->
+		<div id="innerContent" class="clearfix">
+			
+
+			
+			
+
+			
+					<!--Portfolio-->
+								<section id="portfolio">
+										<div class="arrowMain"></div>
+										<!--Title-->
+										<div class="title">
+											<h1>Kuru Kuru Kururin clone template</h1>
+											<h4>inspired by a GBA game</h4>
+										</div>
+										<!--End title-->
+
+
+										<!--Holder 960-->
+										<div class="holder960">
+
+										<div id="portfolioContent" >
+										
+										
+										<!--Single project slider-->
+										<div class="singleProject flexslider">
+			
+											<!--Latest slides-->
+											<ul class="slides clearfix">	
+											<li><img src="images\helix2D_gameplay1.gif" alt="" /></li>
+										</ul>
+											<!--End latest slides-->	
+											
+										</div>
+										<!--End project single slider-->
+										
+										
+										<!--Project description-->
+										<div id="projectDesc" class="clearfix">
+											
+											
+											<!--Description-->
+											<div class="desc ">
+												<h1>UNITY HELIX 2D</h1>
+												<p>
+													This game is inspired by an old classic arcade game from 2001 on GBA published by Nintendo.
+													The goal of the game is to reach the end of each level within the time limit avoiding obstacles.
+													The game is composed of a lifebar, a timer with record system, a checkpoint system and animations.
+													
+													<br><br>
+													This project aims to recreate the main mechanics of the original game, adding a roster of obstacles, 
+													creating open areas with secondary objectives and a system of bonus/malus to collect to influence several variables in the game.
+												</p>
+												
+												
+
+													<li><img class="post-img" src="images\Kuru-Kuru-Kururin-Crashes.gif" alt="" /></li>
+
+													<hr class="solid">
+												<p>This project was perfect to test the Unity native events when we have a small scene with only one character.
+													 The logic is that everything that happened to the player is  a event trigger by all other objects.
+													 This allows to avoid to set references in the player and let each object catch the player reference at the init.
+													<br><br><b>The following code snippet shows how the event class is used to let each bonus to be configured in the editor
+														 without the need to declare each event like with the C# event system. The Unity event system is enought for this small game. </b>.</p>
+												
+												<pre>
+												<code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class BonusMalus : MonoBehaviour
+	{
+		public UnityEvent myEvent;
+	
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+		if (other.CompareTag("Player"))
+			{
+				myEvent?.Invoke();
+				Debug.Log(name + " is collected");
+				Destroy(gameObject, 0.1f);
+			}
+		}
+
+		private void OnCollisionEnter2D(Collision2D collision)
+			{
+				if (collision.gameObject.CompareTag("Player"))
+					{
+						myEvent?.Invoke();
+						Debug.Log(name + " is touched");
+						//Destroy(gameObject, 0.1f);
+					}
+			}
+
+												</code>
+											</pre>
+											
+<p>Below we can see how the editor is used for each bonus prefab to choose a method like we would do with the Unity button script. </p>										
+											<li><img class="post-img" src="images\portfolioImages\helix_bonus_malus_screenshot.png" alt="" /></li>
+
+											<p>This code is a portion of the methods on the Player C# script. It is easier in our case to create a method to increase and another 
+												one to decrease each variable than create a method where we have to pass a sign parameter. Also each variation is then executed by a tweener.
+											</p>
+											<pre><code>
+[...]}
+public void IncreaseSpeed()
+{
+		moveSpeed *= speedModifier;
+}
+
+public void DecreaseSpeed()
+{
+		moveSpeed /= speedModifier;
+}
+
+public void IncreaseRotation()
+{
+		rotationSpeed *= rotationModifier;
+}
+
+public void DecreaseRotation()
+{
+		rotationSpeed /= rotationModifier;
+
+}
+
+public void ChangeRotationAxe()
+{
+		rotationSpeed = -rotationSpeed;
+}
+
+public void IncreaseWingSize()
+{
+		ailes.transform.GetChild(0).
+		DOScaleX(ailes.transform.GetChild(0).transform.localScale.y + 1, 0.3f);
+}
+
+public void DecreaseWingSize()
+{
+		ailes.transform.GetChild(0).
+		DOScaleX(ailes.transform.GetChild(0).transform.localScale.y - 1, 0.3f);
+}[...]
+
+											</code></pre>
+											<hr class="solid">
+
+											<p> <b>The next code snippet is simple and allows us to manage the checkpoints during a level by passing an array in 
+												the PlayerPrefs. The higher index is the higher checkpoint, the array is fed at the start of the level by assigning an index to a 
+												bunch of Transform representing the chechpoint. 
+											</b>
+										<br><br>
+									The designer must be careful by creating the level because the order of children in the Checkpoint gameobject must be the same 
+								as the expected level. With a more complex code we could have create a less strict leve design process.</p>
+											<pre><code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Checkpoint : MonoBehaviour
+{
+	public int index;
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+	if (collision.CompareTag("Player"))
+	{
+		if(GameManager.instance.checkpointIndex < index)
+		{
+		GameManager.instance.checkpointIndex = index;
+		GameManager.instance.checkpointKnow = this.gameObject.transform.position;
+		Debug.Log("index is now" + index);
+		}
+	}
+	}
+}
+
+											</code></pre>
+
+											<p>
+												The last point is that the walls and the floor are made with a Shape sprite Path that allows to create the level with only two object
+												and adding/removing the nodes from the path. The creation is way faster than placing modular elements for the walls. But as with the checkpoint system
+												the simple code will force the designer to be careful and i have include a grid in the editor to help creating proper dimensioned levels.
+												<br><br>
+												<br><b>To conclude this project was made to offer a template to let a level designer create a full with a drag and drop system without having to touch
+												the scripts.
+											</b></p>
+
+											ul class="slides clearfix">	
+											<li><img src="images\helix2D_gameplay2.gif" alt="" /></li>
+										</ul>
+												
+											</div>
+											<!--End description-->
+											
+											<!--Info-->
+											<div class="info column">
+												<h1>Features</h1>
+												<ul>
+													<li>Unity events </li>
+													<li>shape sprite path</li>
+													<li>tweeners</li>
+													<li>template oriented</li>
+
+												</ul>
+												
+											
+												
+											</div>
+
+											<div class="info column">
+												<h1>Inspiration from the original</h1>
+												<ul>
+													<li>Checkpoints</li>
+													<li>Physics system</li>
+													<li>Bouncers</li>
+													<li>Lives system</li>
+											
+
+												</ul>
+												
+											
+												
+											</div>
+
+											<div class="info column">
+												<h1>Personnal additions</h1>
+												<ul>
+													<li>Ennemies</li>
+													<li>Bonus/Malus system</li>
+													<li>Open areas</li>
+													
+
+												</ul>
+												
+											
+												
+											</div>
+											<!--End  info-->
+											
+										</div>
+										<!--End project description-->
+										
+										
+										
+											<!--Related-->
+											<div id="relatedItem" class="clearfix">
+
+												<!--Title inner-->
+												<div class="titleInner">
+													<div class="arrowinnerTitle"></div>
+													<h1>Related items</h1>
+												</div>
+												<!--End title inner-->
+												
+												
+												
+													<!-- Related works list -->
+												
+												<div id="works" class="clearfix">
+													<!--Related-->
+														<ul class="portfolio clearfix">
+
+																				<li class="item">
+																				<img src="images/portfolioImages/img1.jpg" alt="" />
+																				<div class="link"><a class="folio" href="portfolio_single.html"><div class="hgroup"><h3>Project title goes here</h3>
+																					<h4>In Web design</h4></div><i class="icon-link"></i></a></div>
+																				</li>
+
+																				<li class="item">
+																				<img src="images/portfolioImages/img2.jpg" alt="" />
+																				<div class="link"><a class="folio" href="portfolio_single.html"><div class="hgroup"><h3>Project title goes here</h3>
+																					<h4>In Web design</h4></div><i class="icon-link"></i></a></div>
+																				</li>
+
+																				<li  class="item">
+																				<img src="images/portfolioImages/img3.jpg" alt="" />
+																				<div class="link"><a class="folio" href="portfolio_single.html"><div class="hgroup"><h3>Project title goes here</h3>
+																					<h4>In Graphic Design</h4></div><i class="icon-link"></i></a></div>
+																				</li>
+					
+															</ul>
+															<!-- Related -->
+															</div>
+												<!-- End relared works  -->
+										</div>
+										<!--End elated-->
+										
+																		
+									</div>
+									<!-- End portfolio content -->
+									</div>
+									<!-- End holder 960-->
+
+								</section>
+
+					<!--End portfolio-->
+
+			
+
+					<!--Footer-->
+	
+				
+				
+				
+				<!--Footer bottom-->
+				<div class="footerBottom clearfix">
+					
+					<!--Holder 960-->
+					<div class="holder960">
+						<p>Copyright &copy; 2023</p>
+
+							<!--Socials footer-->
+
+							<!--End socials footer-->
+							
+								</div>
+								<!-- End holder 960-->
+				</div>
+				<!--End footer bottom-->	
+		</div>
+		<!--End inner Content-->
+		
+	
+	</div>
+	<!--End main content-->
+</div>
+<!--End wrapper-->
+
+<!--Javascript-->
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-migrate-1.2.1.js" type="text/javascript"></script>
+<script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
+<script src="js/slides.min.jquery.js" type="text/javascript"></script>
+<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="js/jquery.ui.totop.min.js" type="text/javascript"></script>
+<script src="js/selectnav.min.js" type="text/javascript"></script>
+<script src="js/jquery.tweet.js" type="text/javascript"></script>
+<script src="js/jflickrfeed.min.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+
+
+
+<!-- Google analytics -->
+
+
+<!-- End google analytics -->
+
+ </body>
+</html>
