@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+       <!--  <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" /> -->
+        <span class="heading-tertiary">My Portfolio</span>
+      </a>
+
+      <!-- <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">How it works</a></li>
+          <li><a class="main-nav-link" href="#">Meals</a></li>
+          <li><a class="main-nav-link" href="#">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+        </ul>
+      </nav> -->
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <!--       <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              A healthy meal delivered to your door, every single day
+            </h1>
+            <p class="hero-description">
+              The smart 365-days-per-year food subscription that will make you
+              eat healthy again. Tailored to your personal tastes and
+              nutritional needs.
+            </p>
+            <a href="#" class="btn btn--full margin-right-sm"
+              >Start eating well</a
+            >
+            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+              </div>
+              <p class="delivered-text">
+                <span>250,000+</span> meals delivered last year!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/hero.png"
+              class="hero-img"
+              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As featured in</h2>
+          <div class="logos">
+            <img src="img/logos/techcrunch.png" alt="Techcrunch logo" />
+            <img
+              src="img/logos/business-insider.png"
+              alt="Business Insider logo"
+            />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times logo"
+            />
+            <img src="img/logos/forbes.png" alt="Forbes logo" />
+            <img src="img/logos/usa-today.png" alt="USA Today logo" />
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section-how">
+        <div class="container">
+          <span class="subheading">Tile-based games</span>
+          <h2 class="heading-secondary">
+            Several strategy projects.
+          </h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+          <!--   <p class="step-number">01</p> -->
+            <h3 class="heading-tertiary">
+             City Builder
+            </h3>
+            <p class="step-description">
+              This project was made to manage a resource system for a simple turn-based game. The goal is to reach a maximum of population. 
+              Each turn allows to upgrade or build one building. There is maximum capacity for the city (top right corner). 
+              <br />
+              The game ends when one of the 3 goal resource is depleted (science, religion or politics). Others resources are made to upgrades specifics
+              buildings
+              <br> 
+              The camera scripts is the same as in others strategy games and the grid is composed of squared GameObjects with Colliders and a raycast system
+              checking 4 directions.
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\strategy_game\strat_2.gif"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\strategy_game\strat_1.JPG"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+        
+          <div class="step-text-box">
+            <!-- <p class="step-number">02</p> -->
+            <h3 class="heading-tertiary">Hex City Builder</h3>
+            <p class="step-description">
+            Based on the previous project , this game uses a hexagonal grid instead of a squared one. Now the player can choose between three buildings
+            (bottom of the screen), then he can place the selected buiding on one of the empty hex.
+              <br />
+              Each building is a small "quest" where the player has to place the right building type next to it to fulfill the requirement. The quest is represented
+              by the small icons at the top of buildings. Each time a part of the quest is solved, the icon deseappers.
+              <br> 
+             The game is endless and the lose condition is reached when X buildings have incompleted quests( a quest is incomplete when the tile is surrounded
+             and there is no more space to fulfill the goals).
+            </p>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="step-text-box">
+            <!-- <p class="step-number">03</p> -->
+            <h3 class="heading-tertiary">Camera Script</h3>
+            <p class="step-description">
+              This script is used is all my strategy games. It is attached to a ParentObject of the Main Camera.
+              <br>
+              The script uses parameters to manage the zoom and move speed and can rotate all around the pivot object. It is using the
+              the old Input system (made on 2019.v).
+              <br>
+              The player can move and play the game only with the mouse  with this control mapping:
+              <br>
+              When the left mouse button is pressed the player can zoom with the scrollwheel and can move the selected objects while moving the mouse.
+              <br> While the left button is pressed,we can press the scrollwheel to move the empty pivot object on a place like a RTS.
+              <br> While the left button is pressed,we can press the right button to rotate the camera around the empty pivot object.
+              
+            </p>
+          </div>
+
+          <div class="step-text-box">
+            <!-- <p class="step-number">03</p> -->
+       
+            <p class="step-description">
+              <pre><code>
+_______________________________________________________________________
+
+
+
+
+public delegate void OnHauteurChangeDelegate(float newValue);
+public event OnHauteurChangeDelegate OnHauteurChange;
+
+public static CameraController instance;
+
+private void Awake()
+{
+    instance = this;
+    canVerticalMove = true;
+}
+
+private void Start()
+{
+    cam = Camera.main;
+    curZoom = cam.transform.localPosition.y;
+    curXRot = -60;
+    transform.eulerAngles = new Vector3(curXRot, transform.
+    eulerAngles.y,
+     transform.eulerAngles.z);
+}
+
+private void Update()
+{
+        
+if (Input.GetMouseButton(1))
+{
+    //zoom
+    curZoom += Input.GetAxis("Mouse ScrollWheel") * -zoomSpeed;
+    curZoom = Mathf.Clamp(curZoom, minZoom, maxZoom);
+
+    cam.transform.localPosition = Vector3.up * curZoom;
+
+
+    if (Input.GetMouseButton(2))
+    {
+        float x = Input.GetAxis("Mouse X");
+        float y = Input.GetAxis("Mouse Y");
+
+        curXRot += -y * rotateSpeed;
+        curXRot = Mathf.Clamp(curXRot, minXRot, maxXRot);
+        transform.eulerAngles = new Vector3(curXRot, 
+        transform.eulerAngles.y + (x * rotateSpeed), 0.0f);
+
+    }
+
+    if (Input.GetMouseButton(0))
+    {
+        Vector3 forward = cam.transform.forward;
+        forward.y = 0.0f;
+        forward.Normalize();
+
+        Vector3 right = cam.transform.right;
+
+        float moveX = Input.GetAxis("Mouse X");
+        float moveZ = Input.GetAxis("Mouse Y");
+
+        Vector3 dir = -forward * moveZ - right * moveX;
+        dir.Normalize();
+
+        dir *= moveSpeed * Time.deltaTime;
+
+        transform.position += dir;
+    }
+
+}
+_______________________________________________________________________
+              </code></pre>
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\strategy_game\strategyGame.gif"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+        
+          <div class="step-text-box">
+            <!-- <p class="step-number">02</p> -->
+            <h3 class="heading-tertiary">Grid and camera</h3>
+            <p class="step-description">
+           This gif shows how the camera can rotate around the grid and how tiles are created after posing the selected object (similar to Dorkromantik).
+            </p>
+          </div>
+          
+
+          <div class="step-text-box">
+            <!--   <p class="step-number">01</p> -->
+              <h3 class="heading-tertiary">
+               Managing selection
+              </h3>
+              <p class="step-description">
+                This prototype fully use the camera to be able to move an object composed of tiles above the large grid.
+                <br />
+              The goal is to create a mix between the tetris rotating element and a standard city builder.
+                <br> 
+              
+              </p>
+            </div>
+  
+            <div class="step-img-box">
+              <img
+                src="images\strategy_game\strat_4.gif"
+                class="step-img"
+                alt="iPhone app
+              preferences selection screen"
+              />
+            </div>
+
+
+
+
+        </div>
+
+
+        
+      </section>
+
+     
+  </body>
+</html>
