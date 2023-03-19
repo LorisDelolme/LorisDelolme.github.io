@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+       <!--  <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" /> -->
+        <span class="heading-tertiary">My Portfolio</span>
+      </a>
+
+      <!-- <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">How it works</a></li>
+          <li><a class="main-nav-link" href="#">Meals</a></li>
+          <li><a class="main-nav-link" href="#">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+        </ul>
+      </nav> -->
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <!--       <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              A healthy meal delivered to your door, every single day
+            </h1>
+            <p class="hero-description">
+              The smart 365-days-per-year food subscription that will make you
+              eat healthy again. Tailored to your personal tastes and
+              nutritional needs.
+            </p>
+            <a href="#" class="btn btn--full margin-right-sm"
+              >Start eating well</a
+            >
+            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+              </div>
+              <p class="delivered-text">
+                <span>250,000+</span> meals delivered last year!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/hero.png"
+              class="hero-img"
+              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As featured in</h2>
+          <div class="logos">
+            <img src="img/logos/techcrunch.png" alt="Techcrunch logo" />
+            <img
+              src="img/logos/business-insider.png"
+              alt="Business Insider logo"
+            />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times logo"
+            />
+            <img src="img/logos/forbes.png" alt="Forbes logo" />
+            <img src="img/logos/usa-today.png" alt="USA Today logo" />
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section-how">
+        <div class="container">
+          <span class="subheading">Solitaire</span>
+          <h2 class="heading-secondary">
+           The classic card game
+          </h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+          <!--   <p class="step-number">01</p> -->
+            <h3 class="heading-tertiary">
+             Concept
+            </h3>
+            <p class="step-description">
+             This project was made to improve my C# coding abilities in one week. My other projects rely usually on Native system but I wanted
+             to recreate a similar game that I made in JS. The goal is to have minimal graphics and to have good code with smooth tweening animations.
+           
+           
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Solitaire\solitaire_1.gif"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+
+
+          <!-- STEP 03 -->
+    
+
+          <div class="step-text-box">
+            <!-- <p class="step-number">03</p> -->
+       
+            <p class="step-description">
+              <pre><code>
+_______________________________________________________________________
+
+
+
+
+public void ShuffleDeck()
+{
+
+
+for (int i = deck.Count - 1; i > 0; i--)
+{
+    int j = Random.Range(0, i + 1);
+    Card temp = deck[i];
+    deck[i] = deck[j];
+    deck[j] = temp;
+}
+}
+
+public void DealInitGame()
+{
+for (int i = 0; i < 28; i++)
+{
+    Card cardTemp = deck[0];
+    deck.Remove(cardTemp);
+    tableau_deck.Add(cardTemp);
+
+    
+}
+
+int deckIndex = 0;
+for (int i = 0; i < 7; i++)
+{
+    for (int j = 0; j <= i; j++)
+    {
+    Card card = tableau_deck[deckIndex];
+    deckIndex++;
+
+
+card.gameObject.transform.
+SetParent(tableauTransforms[i]);
+card.gameObject.transform.
+localPosition = new Vector3(0, -j * 0.5f,0f);
+card.gameObject.
+GetComponent<SpriteRenderer>().sortingOrder = j;
+card.SetIsOnTableau(true);
+
+
+if (j == i)
+{
+    card.FlipCard();
+    card.SetTopOfStack(true);
+  
+}
+
+}
+}
+
+}
+_______________________________________________________________________
+              </code></pre>
+            </p>
+          </div>
+
+          <div class="step-text-box">
+            <!-- <p class="step-number">03</p> -->
+            <h3 class="heading-tertiary">Deck scripts</h3>
+            <p class="step-description">
+              Those scripts describe the functions to manage the deck with the shuffle and the first deal. 
+              <br>The shuffle is made using a temp list to assign random positions between two lists.
+              <br> THe first deal is made by creating each column of the set as lists and then assigning X cards into it.
+           
+              
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Solitaire\solitaire_2.gif"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+        
+          <div class="step-text-box">
+            <!-- <p class="step-number">02</p> -->
+            <h3 class="heading-tertiary">Animations</h3>
+            <p class="step-description">
+            Animations are made using DOTween function like this one to create a shake when the card is selected and moved:
+            <br><b>tween = this.gameObject.transform.DOShakeRotation(1f).SetEase(Ease.Linear).SetLoops(-1);</b>
+            </p>
+          </div>
+
+
+
+        
+          <div class="step-text-box">
+            <!-- <p class="step-number">02</p> -->
+            <h3 class="heading-tertiary">Tweener sequences</h3>
+            <p class="step-description">
+           Sequences allow to stack animations with some methods between them in the right order with delegates. The following one will rotate the sprite of the 
+           card and when the sprite is invisible to the player (90°), the sprite will swap and then finish the rotation. This is used
+           to "return" a card and changing the backsprite with the face sprite. Another solution would have been to create a 3D object with two faces
+           but the control in the script can be finetuned more easely.
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Solitaire\solitaire_seq.JPG"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+          
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Solitaire\PixelPlebes_4x__Update001_43.png"
+              class="step-img-tall"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+
+          <div class="step-text-box">
+            <!--   <p class="step-number">01</p> -->
+              <h3 class="heading-tertiary">
+               Conclusion
+              </h3>
+              <p class="step-description">
+               This project was really fun thanks to the massive use of delegates, tweeners and boolean controls. Animations were fun to do because it was
+               only controlled by the code. We can improve this by creating animated card frames to add more life to the tableaux.
+               <br> Managing 2d sprites order only by scripts is tricky and it is easy to have cards hidden behind others during tests.
+               <br> This game could be improve by addind particles effects and by creating a scoring system.
+              
+              </p>
+            </div>
+  
+         
+
+
+
+        </div>
+
+
+        
+      </section>
+
+     
+  </body>
+</html>

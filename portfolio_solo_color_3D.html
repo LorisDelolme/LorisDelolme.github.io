@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+       <!--  <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" /> -->
+        <span class="heading-tertiary">My Portfolio</span>
+      </a>
+
+      <!-- <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">How it works</a></li>
+          <li><a class="main-nav-link" href="#">Meals</a></li>
+          <li><a class="main-nav-link" href="#">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+        </ul>
+      </nav> -->
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <!--       <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              A healthy meal delivered to your door, every single day
+            </h1>
+            <p class="hero-description">
+              The smart 365-days-per-year food subscription that will make you
+              eat healthy again. Tailored to your personal tastes and
+              nutritional needs.
+            </p>
+            <a href="#" class="btn btn--full margin-right-sm"
+              >Start eating well</a
+            >
+            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+              </div>
+              <p class="delivered-text">
+                <span>250,000+</span> meals delivered last year!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/hero.png"
+              class="hero-img"
+              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As featured in</h2>
+          <div class="logos">
+            <img src="img/logos/techcrunch.png" alt="Techcrunch logo" />
+            <img
+              src="img/logos/business-insider.png"
+              alt="Business Insider logo"
+            />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times logo"
+            />
+            <img src="img/logos/forbes.png" alt="Forbes logo" />
+            <img src="img/logos/usa-today.png" alt="USA Today logo" />
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section-how">
+        <div class="container">
+          <span class="subheading">Color Dragon</span>
+          <h2 class="heading-secondary">
+           A full mobile game project
+          </h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+          <!--   <p class="step-number">01</p> -->
+            <h3 class="heading-tertiary">
+             Concept
+            </h3>
+            <p class="step-description">
+             This project was made with severals objectives, this is a portage of my previous 2D color puzzle game in a 3d game. It is also a publlished 
+             game on the android store and the goal was to integrate Ads.
+           
+           
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Dragon\dragon1.gif"
+              class="step-img-tall"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Dragon\pooler.JPG"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+        
+          <div class="step-text-box">
+            <!-- <p class="step-number">02</p> -->
+            <h3 class="heading-tertiary">Objects Pooler</h3>
+            <p class="step-description">
+            The object pooler concept is used for the little rabbits. ths allows the game to manage memory for the mobile device.
+            It is just a init and a get methods.
+            <br> The script is then attached to the prefab of the rabbit GameObject.
+            </p>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="step-text-box">
+            <!-- <p class="step-number">03</p> -->
+            <h3 class="heading-tertiary">Ads Integration</h3>
+            <p class="step-description">
+              There are a lot of different system to integrate ads in a game but Unity has a native library with the UnityEngine.Advertisements.
+              It uses Listeners to manage calls to the Ads server.
+              <br>
+              The ads will play when a game ends, if the ads already started it wont launch a new one.
+              <br>
+           
+              
+            </p>
+          </div>
+
+          <div class="step-text-box">
+            <!-- <p class="step-number">03</p> -->
+       
+            <p class="step-description">
+              <pre><code>
+_______________________________________________________________________
+
+
+
+
+using UnityEngine.Advertisements;
+
+public class AdManager : MonoBehaviour , IUnityAdsListener
+{
+
+public string myGameIdAndroid = "4272665";
+public string myVideoPlacement = "RewardToContinue";
+public string myAdStatus = "";
+public bool adStarted;
+public bool adCompleted;
+
+private bool alreadyShown = false;
+
+private bool testMode = true;
+ShowOptions options = new ShowOptions();
+
+private void Start()
+{
+    Advertisement.AddListener(this);
+    Advertisement.Initialize(myGameIdAndroid);
+
+}
+
+private void OnDestroy()
+{
+    Advertisement.RemoveListener(this);
+}
+
+
+
+public void PlayRewardedAd()
+{
+
+    if (!alreadyShown)
+    {
+        if (!adStarted)
+        {
+            Advertisement.Show(myVideoPlacement, options);
+
+        }
+      
+        UI.instance.ActiveBlock();
+        alreadyShown = true;
+    }
+      
+    
+    
+
+}
+
+public void OnUnityAdsDidError(string message)
+{
+    myAdStatus = message;
+}
+
+public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
+{
+    if( showResult == ShowResult.Finished)
+    {
+        GameManager.instance.ContinueWithRewardedAd();
+
+        UI.instance.DeactiveBlock();
+    }
+  
+
+}
+
+public void OnUnityAdsDidStart(string placementId)
+{
+    adStarted = true;
+}
+_______________________________________________________________________
+              </code></pre>
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="images\Unity\Dragon\dragon2.gif"
+              class="step-img-tall"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+        
+          <div class="step-text-box">
+            <!-- <p class="step-number">02</p> -->
+            <h3 class="heading-tertiary">Difficulty Management</h3>
+            <p class="step-description">
+           The game will spawns a limited number of rabbits. If the player is not quick enought the stock will deplete pretty fast.
+           The score system evolve with time as the passing points to unlock the "Eat" button.
+            </p>
+          </div>
+          
+
+          <div class="step-text-box">
+            <!--   <p class="step-number">01</p> -->
+              <h3 class="heading-tertiary">
+               Conclusion
+              </h3>
+              <p class="step-description">
+               The game suffers from the same issue as th 2d counterpart. The colors of the backgrounds are pretty dull because we need 
+               to give highlights to the rabbits.
+               <br> The backgrounds receive a natural light in the 3D space when the characters use a toon shader that will simulate the light without any source.
+               <br>
+               The camera view could be improved as it is sometime tricky to clic on the rabbits at the back row.
+              
+              </p>
+            </div>
+  
+            <div class="step-img-box">
+              <img
+                src="images\Unity\Dragon\area.JPG"
+                class="step-img"
+                alt="iPhone app
+              preferences selection screen"
+              />
+            </div>
+
+
+
+
+        </div>
+
+
+        
+      </section>
+
+     
+  </body>
+</html>
