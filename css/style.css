@@ -79,7 +79,7 @@
 /**************************/
 /* HERO SECTION */
 /**************************/
-pre code {
+.pre-code {
   font-family: Consolas, Monaco, "Andale Mono", monospace;
   font-size: 14px;
   color: #333;
@@ -90,6 +90,8 @@ pre code {
   overflow-x: auto;
   display: block;
   text-indent: 1em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-hero {
